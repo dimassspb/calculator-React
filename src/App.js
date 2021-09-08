@@ -27,7 +27,7 @@ function App() {
     return digits;
   };
 
-  const Resultulate = () => {
+  const calculate = () => {
     setResult(eval(result).toString());
   };
 
@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <div className="Resultulator">
+    <div className="calculator">
       <div className="input">{result ? result : '0'}</div>
       <div className="buttons">
         <div className="operators">
@@ -55,7 +55,7 @@ function App() {
             <div onClick={reset}>AC</div>
           </div>
         </div>
-        <div className="equal" onClick={Resultulate}>
+        <div className="equal" onClick={calculate}>
           =
         </div>
       </div>
