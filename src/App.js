@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import { create, all } from 'mathjs';
+
+const config = {};
+const math = create(all, config);
 
 function App() {
   const [result, setResult] = useState('');
@@ -28,7 +32,7 @@ function App() {
   };
 
   const calculate = () => {
-    setResult(eval(result).toString());
+    setResult(math.evaluate(result).toString());
   };
 
   const reset = () => {
